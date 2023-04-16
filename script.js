@@ -1,4 +1,5 @@
 
+
 // Definimos un array vacío para guardar los personajes
 let personajes = [];
 
@@ -124,16 +125,17 @@ function actualizarLista() {
       <label for="Estado"></label>
       <input type="number" placeholder ="CA Bonus" id="CAB" class="bar" name="PGT">
       </span>
-      <span>
+      <span id="PGpg">
         <button onclick="restarPuntosDeGolpe(${index})">-</button>
         PG actuales: ${personaje.combate}
         <button onclick="sumarPuntosDeGolpe(${index})">+</button>
+        PG Maximos: ${personaje.PGM}
       </span>
-      <span>PG Maximos: ${personaje.PGM}</span>
-      <label for="Estado"></label>
+      <span id="estadotemp">
+      <label for="Tempora"></label>
       <input type="number" placeholder ="PG temporales" id="PGT" class="bar" name="PGT">
-      <label for="Temporal"></label>
-      <input type="text" placeholder ="Estado" id="Estado" class="bar" name="Estado">
+      <label for="Estado"></label>
+      <input type="text" placeholder ="Estado" id="Estado" class="bar" name="Estado"></span>
       <button onclick="eliminarPersonaje(${index})">Eliminar</button>
     `;
     
@@ -179,5 +181,6 @@ function cambiarTurno() {
 }
 
 cambiarTurnoBtn.addEventListener("click", cambiarTurno);
+
 
 
