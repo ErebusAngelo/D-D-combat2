@@ -16,7 +16,8 @@ body {
     text-align: center;
     text-shadow: 2px 2px #000000;
   }
-  
+
+
   h2 {
     color: #dfc100;
     font-size: 30px;
@@ -27,12 +28,18 @@ body {
     text-shadow: 1px 1px #000000;
   }
 
+
+  #sp{
+    font-size: 20px;
+  }
   span img {
     vertical-align: middle;
     
     /* Agregue estilos adicionales para la imagen si es necesario */
   }
 
+
+  
   img {
     width: 11%;
   }
@@ -72,8 +79,9 @@ body {
   }
 
   .bar{
-    font-size:23px;
+    font-size:22px;
     border-radius: 5px;
+    width: 11%;
   }
   
   input[type="text"]:not(#Estado),
