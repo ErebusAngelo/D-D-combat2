@@ -32,8 +32,15 @@ body {
 span{
   
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  gap: 10px;
+}
+
+
+#PGpg{
+width: 40%;
+
 }
   #sp{
     font-size: 20px;
@@ -46,7 +53,7 @@ span{
   }
 
 #CAB{
-margin-right: 34%;
+
 width: 15%;
 height: 10%;
 
@@ -92,9 +99,10 @@ height: 10%;
   }
 
   .bar{
+    gap: 5px;
     font-size:22px;
     border-radius: 5px;
-    width: 11%;
+    width: 50%;
   }
   
   input[type="text"]:not(#Estado),
@@ -244,4 +252,32 @@ font-size: 20px;
 padding: 8px 16px;
 }
 
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  /* Aplicar un estilo de diseño de columna para los elementos span */
+  .span-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .span-container span {
+    flex-basis: 48%;
+    margin-bottom: 10px;
+  }
 }
