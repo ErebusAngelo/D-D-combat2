@@ -120,7 +120,10 @@ function actualizarLista() {
     hp = personaje.combate 
     li.innerHTML = `
       <span>${personaje.nombre} - Iniciativa <input type="number" id="ini" min="0" value="${personaje.iniciativa}" onchange="modificarAtributo(${index}, 'iniciativa', event.target.value)"> - <img src="
-      ./CA.png" alt="Descripción de la imagen"> ${personaje.CA} </span>
+      ./CA.png" alt="Descripción de la imagen"> ${personaje.CA} 
+      <label for="Estado"></label>
+      <input type="number" placeholder ="CA Bonus" id="CAB" class="bar" name="PGT">
+      </span>
       <span>
         <button onclick="restarPuntosDeGolpe(${index})">-</button>
         PG actuales: ${personaje.combate}
@@ -176,6 +179,5 @@ function cambiarTurno() {
 }
 
 cambiarTurnoBtn.addEventListener("click", cambiarTurno);
-
 
 
