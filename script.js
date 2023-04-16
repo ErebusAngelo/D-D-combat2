@@ -1,5 +1,5 @@
 
-// Definimos un array vacío para guardar los personajes
+/// Definimos un array vacío para guardar los personajes
 let personajes = [];
 
 // Función que agrega un personaje a la lista
@@ -125,16 +125,17 @@ function actualizarLista() {
     const li = document.createElement("li");
     
     li.innerHTML = `
-      <span>${personaje.nombre} - Iniciativa <input type="number" id="ini" min="0" value="${personaje.iniciativa}" onchange="modificarAtributo(${index}, 'iniciativa', event.target.value)"> - CA: ${personaje.CA} </span>
+      <span>${personaje.nombre} - Iniciativa <input type="number" id="ini" min="0" value="${personaje.iniciativa}" onchange="modificarAtributo(${index}, 'iniciativa', event.target.value)"> - <img src="
+      ./CA.png" alt="Descripción de la imagen"> ${personaje.CA} </span>
       <span>
         <button onclick="restarPuntosDeGolpe(${index})">-</button>
         Puntos de Golpe: ${personaje.combate}
         <button onclick="sumarPuntosDeGolpe(${index})">+</button>
       </span>
       <label for="Estado"></label>
-      <input type="" placeholder ="Estado" id="Estado" name="Estado">
+      <input type="number" placeholder ="PG temporales" id="PGT" class="bar" name="PGT">
       <label for="Temporal"></label>
-      <input type="" placeholder ="PG Temporales" id="Temporal" name="Temporal">
+      <input type="text" placeholder ="Estado" id="Estado" class="bar" name="Estado">
       <button onclick="eliminarPersonaje(${index})">Eliminar</button>
     `;
     lista.appendChild(li);
